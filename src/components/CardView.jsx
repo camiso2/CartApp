@@ -3,6 +3,8 @@ import { calculatetotal } from "../services/ProductService";
 import { useNavigate } from "react-router-dom";
 import { CurrencyFormat } from "./Custom/helperFormatNumber";
 
+import { SweetAlertConfirmDelete } from "./SweetAlert/Sweet.jsx";
+
 
 const CardView = ({ title, items, handlerDelete }) => {
 
@@ -19,10 +21,11 @@ const CardView = ({ title, items, handlerDelete }) => {
     }
 
 
-    const navigate  =  useNavigate();
-    const onCatalog = ()=>{
+    const navigate = useNavigate();
+    const onCatalog = () => {
 
         navigate('/catalogo')
+        
 
     }
 
@@ -47,26 +50,34 @@ const CardView = ({ title, items, handlerDelete }) => {
                         items.map(({ product, quantity }) => (
                             <tr key={product.id}>
                                 <td>{product.name}</td>
-                                <td>$ {CurrencyFormat(product.price)  }</td>
+                                <td>$ {CurrencyFormat(product.price)}</td>
                                 <td>{quantity}</td>
-                                <td>$ { CurrencyFormat(quantity * product.price) }</td>
-                                <td> <button onClick={() => onDeleteProduct(product.id)}
-                                    className="btn btn-danger btn-xs"><i className="fa fa-trash"></i>eliminar</button></td>
-                                    
+                                <td>$ {CurrencyFormat(quantity * product.price)}</td>
+                                <td>
+                                    <button
+                                        className='btn btn-danger'
+                                        onClick={() => {
+                                            SweetAlertConfirmDelete((result) => {
+                                                if (result) { onDeleteProduct(product.id) }
+                                            });
+                                        }
+                                        }
+                                    ><i className='fa fa-trash'></i>
+                                        Eliminar</button>
+                                </td>
                             </tr>
-                            
                         ))
                     }
-           
+
                 </tbody>
 
 
                 <tfoot>
-                
-                   
+
+
                     <tr className="new-hr">
                         <td colSpan="4" className="text-end fw-bold tam-total"><b>TOTAL COMPRA</b></td>
-                        <td colSpan="2" className="text-start fw-bold tam-total"> <b>  $ { CurrencyFormat(total) }</b> </td>
+                        <td colSpan="2" className="text-start fw-bold tam-total"> <b>  $ {CurrencyFormat(total)}</b> </td>
                     </tr>
                 </tfoot>
 

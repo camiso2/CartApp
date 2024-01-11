@@ -1,3 +1,4 @@
+
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content'
 
@@ -25,8 +26,8 @@ export const SweetAlertError = (message, type)=>{
 export const SweetAlertConfirmDelete = (callback)=>{
 
   return Swal.fire({
-      title: "Esta Seguro?",
-      text: "Se dispone a eliminar un Detalle!",
+      title: "Esta Seguro/a?",
+      text: "Se dispone a eliminar un producto de su lista de compras!",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
@@ -36,10 +37,29 @@ export const SweetAlertConfirmDelete = (callback)=>{
     }).then((result) => {
       if (result.isConfirmed ) {
         Swal.fire({
-          title: "Eliminado!",
-          text: "Su Detalle Fue Eliminado.",
-          icon: "success"
+          title: "Su Producto Fue Eliminado.!",
+          icon: "success",
+          showConfirmButton: false,
+          timer: 1500
         });
+        callback(result && result.value == true);
+      }
+    });
+   
+}
+
+export const SweetAlertConfirmKeepBuying = (callback)=>{
+  return Swal.fire({
+      title: "Esta Seguro/a ?",
+      text: "Desea seguir incluyendo productos a su lista de compras ?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Quiero Ver la Lista de Compras!",
+      cancelButtonText: "Incluir Más Productos!"
+    }).then((result) => {
+      if (result.isConfirmed ) {
         callback(result && result.value == true);
       }
     });

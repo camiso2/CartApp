@@ -9,11 +9,8 @@ import { calculatetotal } from './services/ProductService';
 
 
 export const CardApp = () => {
-
-    
     //desestructurando useItemsCart()
     const { handlerAddProductCart, handleDeleteProductCart, cardItems } = useItemsCart();
-    console.log(cardItems);
     return (
         <>
             <div className="container">
