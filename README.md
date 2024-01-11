@@ -8,7 +8,7 @@ El sistema busca simular una carro de compras on-line con el uso de un catalogo,
 ## <a href="https://www.youtube.com/watch?v=DZrnReaQ6oI" target="_blank">DEMO</a>
 
 
-Utilidades REACT :: Crear Factura
+Utilidades REACT :: Carro de Compras
 
 * Lee los datos de un archivo (.json).
 * Crea Detalles de productos agregado por el usuario de manera dinámica.
@@ -16,6 +16,7 @@ Utilidades REACT :: Crear Factura
 * Componente de rutas ()
 * Totaliza el costo de los productos.
 * Totaliza el costo general de la compra.
+
 
 Tecnologías Usadas
 * Front-end  : JS->React, Vite, Bootstrap5
