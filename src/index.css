@@ -109,7 +109,7 @@ h2 {
     font-size: 1rem;
     font-weight: 500;
     text-transform: uppercase;
-    padding: 5px 50px 5px 50px
+    padding: 5px 20px 5px 20px
 }
 
 .box .btn {
@@ -137,6 +137,19 @@ h2 {
     outline: 0;
     box-shadow: -1px 6px 19px rgba(247, 129, 10, 0.25);
     border-radius: 100px;
+
+}
+
+.btn-primary {
+    background: none #2b75ee;
+    color: #ffffff;
+    fill: #ffffff;
+    border: none;
+    text-decoration: none;
+    outline: 0;
+    box-shadow: -1px 6px 19px rgba(10, 30, 247, 0.25);
+    border-radius: 100px;
+    margin-left: 15px;
 
 }
 
@@ -301,4 +314,9 @@ p {
 
 img{
     border-radius: 10px;
+}
+
+.cop{
+     color:rgb(213, 213, 213);
+     font-size: .5em;
 }

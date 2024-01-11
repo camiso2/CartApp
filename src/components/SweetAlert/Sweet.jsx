@@ -49,13 +49,14 @@ export const SweetAlertConfirmDelete = (callback)=>{
 }
 
 export const SweetAlertConfirmKeepBuying = (callback)=>{
+
   return Swal.fire({
       title: "Esta Seguro/a ?",
       text: "Desea seguir incluyendo productos a su lista de compras ?",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
+      cancelButtonColor: "#28a745",
       confirmButtonText: "Quiero Ver la Lista de Compras!",
       cancelButtonText: "Incluir Más Productos!"
     }).then((result) => {

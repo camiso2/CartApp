@@ -25,7 +25,7 @@ const CardView = ({ title, items, handlerDelete }) => {
     const onCatalog = () => {
 
         navigate('/catalogo')
-        
+
 
     }
 
@@ -83,7 +83,7 @@ const CardView = ({ title, items, handlerDelete }) => {
 
             </table>
 
-            <button className="btn btn-warning" onClick={onCatalog}>   <i className="fa fa-arrow-circle-left"></i>  Seguir comprando</button>
+            <button className="btn btn-warning" onClick={onCatalog}>   <i className="fa fa-arrow-circle-left"></i> Seguir comprando</button>
         </>
     )
 }
