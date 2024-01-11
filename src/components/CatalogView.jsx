@@ -7,7 +7,7 @@ import { CatalogItem } from "./CatalogItem";
 export const CatalogView = ({ title, handler }) => {
 
 
-
+ console.log(getProducts());
     const [products, setProducts] = useState([]);
     useEffect(
         () => {
@@ -19,11 +19,12 @@ export const CatalogView = ({ title, handler }) => {
     return (
         <>
 
-            <h1>{title}</h1>
+            <br />
+            <h4 >{title}</h4>
             <hr />
             <div className="row">
                 {
-                    products.map(({ name, description, price, id }) => (
+                    products.map(({ image, name, description, price, id }) => (
                         <div className="col-4 my-2  "
                             key={id} >
                             <CatalogItem
@@ -31,16 +32,17 @@ export const CatalogView = ({ title, handler }) => {
                                 id={id}
                                 name={name}
                                 description={description}
-                                price={price} />
+                                price={price} 
+                                image={image}/>
 
                         </div>
                     ))
                 }
 
-                
+
             </div>
 
-           
+
 
 
         </>

@@ -1,10 +1,13 @@
 import { useNavigate } from "react-router-dom";
+import { CurrencyFormat } from "./Custom/helperFormatNumber";
 
 
-export const CatalogItem = ({ name, description, price, id, handler }) => {
+export const CatalogItem = ({ image,name, description, price, id, handler }) => {
 
     //hook
     const navigate = useNavigate();
+
+    console.log(image);
 
     const onAddProduct = (product) => {
         //console.log(product);
@@ -17,10 +20,10 @@ export const CatalogItem = ({ name, description, price, id, handler }) => {
         <>
             <div className="card ">
                 <div className="card-body">
-                    <img src="/test.jpg" class="card-img-top" alt="..."/>
-                    <h5 className="card-title">{name}</h5>
-                    <p className="card-text"> {description}</p>
-                    <p className="card-text text-tam"> <b>$ {price}</b></p>
+                    <img src={image} className="card-img-top" alt="..." />
+                    <p className="card-title">{name}</p>
+                    <p className="card-text ">{description}</p>
+                    <h1 className="card-text text-tam"> <b>$ {CurrencyFormat(price)  }</b></h1>
                     <br />
                     <button
                         onClick={() => onAddProduct({ name, description, price, id })}

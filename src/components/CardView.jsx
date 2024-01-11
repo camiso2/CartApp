@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { calculatetotal } from "../services/ProductService";
 import { useNavigate } from "react-router-dom";
+import { CurrencyFormat } from "./Custom/helperFormatNumber";
 
 
 const CardView = ({ title, items, handlerDelete }) => {
@@ -33,11 +34,11 @@ const CardView = ({ title, items, handlerDelete }) => {
             <table className="table table-responsive table-striped table-over ">
                 <thead>
                     <tr>
-                        <th>Producto</th>
-                        <th>Precio</th>
-                        <th>Cantidad</th>
-                        <th>total</th>
-                        <th>Eliminar</th>
+                        <th className="wcf-prod">Producto</th>
+                        <th className="wcf-price">Precio</th>
+                        <th className="wcf-cant">Cantidad</th>
+                        <th className="wcf-total">Sub-Total</th>
+                        <th className="wcf-delete">Eliminar</th>
                     </tr>
                 </thead>
 
@@ -46,26 +47,32 @@ const CardView = ({ title, items, handlerDelete }) => {
                         items.map(({ product, quantity }) => (
                             <tr key={product.id}>
                                 <td>{product.name}</td>
-                                <td>{product.price}</td>
+                                <td>$ {CurrencyFormat(product.price)  }</td>
                                 <td>{quantity}</td>
-                                <td>{quantity * product.price}</td>
+                                <td>$ { CurrencyFormat(quantity * product.price) }</td>
                                 <td> <button onClick={() => onDeleteProduct(product.id)}
-                                    className="btn btn-danger btn-sm">eliminar</button></td>
+                                    className="btn btn-danger btn-xs"><i className="fa fa-trash"></i>eliminar</button></td>
+                                    
                             </tr>
+                            
                         ))
                     }
+           
                 </tbody>
 
+
                 <tfoot>
-                    <tr>
-                        <td colSpan="3" className="text-end fw-bold">Total</td>
-                        <td colSpan="2" className="text-start fw-bold">$ {total}</td>
+                
+                   
+                    <tr className="new-hr">
+                        <td colSpan="4" className="text-end fw-bold tam-total"><b>TOTAL COMPRA</b></td>
+                        <td colSpan="2" className="text-start fw-bold tam-total"> <b>  $ { CurrencyFormat(total) }</b> </td>
                     </tr>
                 </tfoot>
 
             </table>
 
-            <button className="btn btn-success" onClick={onCatalog}>Seguir comprando</button>
+            <button className="btn btn-warning" onClick={onCatalog}>   <i className="fa fa-arrow-circle-left"></i>  Seguir comprando</button>
         </>
     )
 }

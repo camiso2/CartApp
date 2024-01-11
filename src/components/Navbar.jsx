@@ -1,12 +1,22 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
+import { CurrencyFormat } from "./Custom/helperFormatNumber";
 
 
-const Navbar = () => {
+const Navbar = ({   title, total}) => {
+
+
+   const navigate  = useNavigate();
+   const onCart = ()=>{
+
+    navigate('/cart')
+
+}
+
     return (
         <>
             <nav className="navbar navbar-expand-lg  navbar-dark bg-dark">
-                <div className="container-fluid">
-                    <a className="navbar-brand" href="/">CARRO DE COMPRAS</a>
+                <div className="container">
+                    <a className="navbar-brand" href="/"><i className="fa fa-birthday-cake"></i>{title}</a>
                     <button
                         className="navbar-toggler"
                         type="button"
@@ -23,18 +33,22 @@ const Navbar = () => {
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
                                 <NavLink
-                                    className={'nav-link'} to='/'>Inicio</NavLink>
+                                    className={'nav-link'} to='/'> | Inicio</NavLink>
                             </li>
                             <li className="nav-item">
                                 <NavLink
-                                    className={'nav-link'} to='catalogo'>Catalogo</NavLink>
+                                    className={'nav-link'} to='catalogo'> | Catalogo</NavLink>
                             </li>
                             <li className="nav-item">
                                 <NavLink
-                                    className={'nav-link'} to='cart'>Cart</NavLink>
+                                    className={'nav-link'} to='cart'> | Lista de Productos</NavLink>
                             </li>
 
                         </ul>
+
+                        <button 
+                        className="btn btn-outline-success"
+                         onClick={onCart} type="submit"> <b> {(total<1)?'No tiene Productos Agregados!': 'Total : $ '+CurrencyFormat(total) }</b></button>
 
                     </div>
                 </div>
