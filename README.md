@@ -3,7 +3,7 @@
 
 Sistema desarrollado  
 
-El sistema busca simular una carro de compras en on-line, usando datos estáticos 
+El sistema busca simular una carro de compras en on-line con el uso de un catalogo on line (SPA)
 
 ## <a href="https://www.youtube.com/watch?v=DZrnReaQ6oI" target="_blank">DEMO</a>
 
