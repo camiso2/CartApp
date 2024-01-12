@@ -5,7 +5,7 @@ Sistema desarrollado
 
 El sistema busca simular una carro de compras on-line con el uso de un catalogo, la aplicación esta basada en (SPA)
 
-## <a href="https://www.youtube.com/watch?v=DZrnReaQ6oI" target="_blank">DEMO</a>
+## <a href="https://youtu.be/aSTMgMif2ZI" target="_blank">DEMO</a>
 
 
 Utilidades REACT :: Carro de Compras
