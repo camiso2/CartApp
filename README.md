@@ -1,4 +1,4 @@
-## Proyecto Personal REACT :: Carro de Compras (Curso : UDEMY)
+## Proyecto Personal REACT :: Carro de Compras 
 
 
 Sistema desarrollado  
