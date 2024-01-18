@@ -9,9 +9,15 @@ export const CatalogView = ({ title, handler }) => {
 
  console.log(getProducts());
     const [products, setProducts] = useState([]);
+
+    //retorna datos de backend
+    const findAllSpringBoot = async()=>{
+       const  productSpringBoot = await getProducts();
+       setProducts(productSpringBoot);
+    }
     useEffect(
         () => {
-            setProducts(getProducts());
+            findAllSpringBoot();
         }, []
     )
 
