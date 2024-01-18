@@ -3,7 +3,7 @@
 
 Sistema desarrollado  
 
-El sistema creado es un API que consume recursos de una base de datos relacional con el uso de SprintBoot como back-end y JPa para las consultas
+El sistema creado es un API que consume recursos de una base de datos relacional con el uso de SprintBoot como back-end y JPA para las consultas
 
 ## <a href="https://youtu.be/aSTMgMif2ZI" target="_blank">DEMO</a>
 
