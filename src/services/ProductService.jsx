@@ -7,6 +7,8 @@ export const getProducts = async ()=>{
     const products = await  response.json();
 
     return products;
+
+    //test
 }
 
 
