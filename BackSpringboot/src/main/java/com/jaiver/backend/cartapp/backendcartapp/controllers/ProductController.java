@@ -12,7 +12,7 @@ import com.jaiver.backend.cartapp.backendcartapp.services.ProductService;
 import com.jaiver.backend.cartapp.backendcartapp.models.entities.Product;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:5175")
+@CrossOrigin(origins = "http://localhost:5173")
 //@RequestMapping("/api")
 public class ProductController {
     @Autowired
