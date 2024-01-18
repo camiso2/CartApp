@@ -14,7 +14,7 @@ Utilidades REACT :: Carro de Compras
 
 
 Tecnologías Usadas
-* Front-end  : SprintBoot, maven, JPA, MySQL, spring devTools
+* Backend-end  : SprintBoot, maven, JPA, MySQL, spring devTools
 * Tiempo de desarrollo 6 horas
 
 Version JDK : 17
