@@ -1,4 +1,4 @@
-## Proyecto Personal SPRINGBOOT :: API Productos
+## Proyecto Personal SPRINGBOOT3 :: API Productos
 
 
 Sistema desarrollado  
@@ -8,7 +8,7 @@ El sistema creado es un API que consume recursos de una base de datos relacional
 ## <a href="https://youtu.be/aSTMgMif2ZI" target="_blank">DEMO</a>
 
 
-Utilidades REACT :: Carro de Compras
+Utilidades SPRINGBOOT3 :: Carro de Compras
 
 * Lee todos los productos de una base de datos
 
